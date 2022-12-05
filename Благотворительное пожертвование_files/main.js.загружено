@@ -664,17 +664,17 @@
         anonimCheckbox.style.display = 'none';
         Array.prototype.forEach.call(options, function (option) {
           if (option.getAttribute('data-has-recurring') === "1") {
-            
+            option.style.display = 'block';
             option.setAttribute ("hidden", "falce")
           } else if (option.getAttribute('data-has-recurring') === "0") {
-            
+            option.style.display = 'none';
             option.setAttribute ("hidden", "true")
           }
         });
       } else if (regularity === "0") {
         anonimCheckbox.style.display = 'flex';
         Array.prototype.forEach.call(options, function (option) {
-          
+          option.style.display = 'block';
           option.setAttribute ("hidden", "falce")
         });
       }
