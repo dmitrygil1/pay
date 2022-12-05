@@ -665,14 +665,17 @@
         Array.prototype.forEach.call(options, function (option) {
           if (option.getAttribute('data-has-recurring') === "1") {
             option.style.display = 'block';
+	    $(this).show();
           } else if (option.getAttribute('data-has-recurring') === "0") {
             option.style.display = 'none';
+	    $(this).hide();
           }
         });
       } else if (regularity === "0") {
         anonimCheckbox.style.display = 'flex';
         Array.prototype.forEach.call(options, function (option) {
           option.style.display = 'block';
+	  $(this).show();
         });
       }
     };
