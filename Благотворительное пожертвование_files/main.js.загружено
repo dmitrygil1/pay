@@ -673,12 +673,9 @@
         anonimCheckbox.style.display = 'flex';
         Array.prototype.forEach.call(options, function (option) {
           option.style.display = 'block';
-
         });
       }
     };
-    
-    $('option[data-has-recurring="0"]').remove();
 	
     window.checkRecurringAttribute = checkRecurringAttribute;
 
