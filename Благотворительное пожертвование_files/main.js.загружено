@@ -667,8 +667,6 @@
             option.style.display = 'block';
           } else if (option.getAttribute('data-has-recurring') === "0") {
             option.style.display = 'none';
-$(this).prop("disabled", true); // for safari
-$(this).hide();
           }
         });
       } else if (regularity === "0") {
@@ -679,7 +677,9 @@ $(this).hide();
         });
       }
     };
-
+    
+    $('option[data-has-recurring="0"]').remove();
+	
     window.checkRecurringAttribute = checkRecurringAttribute;
 
     function checkPaymentWay() {
