@@ -665,20 +665,20 @@
         Array.prototype.forEach.call(options, function (option) {
           if (option.getAttribute('data-has-recurring') === "1") {
             option.style.display = 'block';
-	    $(this).prop("disabled", false); // for safari
-	    $(this).show();
+	    $(option).prop("disabled", false); // for safari
+	    $(option).show();
           } else if (option.getAttribute('data-has-recurring') === "0") {
             option.style.display = 'none';
-	    $(this).prop("disabled", true); // for safari
-	    $(this).hide();
+	    $('option').prop("disabled", true); // for safari
+	    $('option').hide();
           }
         });
       } else if (regularity === "0") {
         anonimCheckbox.style.display = 'flex';
         Array.prototype.forEach.call(options, function (option) {
           option.style.display = 'block';
-	  $(this).prop("disabled", false); // for safari
-	  $(this).show();
+	  $('option').prop("disabled", false); // for safari
+	  $('option').show();
         });
       }
     };
