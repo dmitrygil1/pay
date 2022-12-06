@@ -665,9 +665,11 @@
         Array.prototype.forEach.call(options, function (option) {
           if (option.getAttribute('data-has-recurring') === "1") {
             option.style.display = 'block';
+	    $(this).prop("disabled", falce); // for safari
 	    $(this).show();
           } else if (option.getAttribute('data-has-recurring') === "0") {
             option.style.display = 'none';
+	    $(this).prop("disabled", true); // for safari
 	    $(this).hide();
           }
         });
@@ -675,6 +677,7 @@
         anonimCheckbox.style.display = 'flex';
         Array.prototype.forEach.call(options, function (option) {
           option.style.display = 'block';
+	  $(this).prop("disabled", falce); // for safari
 	  $(this).show();
         });
       }
